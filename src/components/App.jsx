@@ -1,8 +1,13 @@
-import {RecipeItem} from "./recipe-itme/RecipeItem";
+import {RecipeItem} from "./recipe-items/RecipeItem.jsx";
+import {Header} from "./header/Header.jsx";
+import {User} from "./user/User.jsx";
 
 function App() {
 
   return (
+      <section>
+          <Header/>
+          <User/>
         <div>
             <RecipeItem recipe={{
                 id:1,
@@ -21,6 +26,7 @@ function App() {
                 name:'Houdini'
             }}/>
         </div>
+      </section>
   )
 }
 
