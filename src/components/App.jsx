@@ -1,33 +1,29 @@
 import {RecipeItem} from "./recipe-items/RecipeItem.jsx";
 import {Header} from "./header/Header.jsx";
-import {User} from "./user/User.jsx";
+import {useGetRecipesQuery} from '../store/api/api.js';
+import {CreateRecipe} from "./create-recipe/CreateRecipe";
 
+// const userId = null
+//do not show data under a certain condition
 function App() {
+    const {isLoading, data} = useGetRecipesQuery()
+        //     undefined, {
+        //     skip: !userId,
+        // })
 
-  return (
-      <section>
-          <Header/>
-          <User/>
-        <div>
-            <RecipeItem recipe={{
-                id:1,
-                name:'Jem'
-            }}/>
-            <RecipeItem recipe={{
-                id:2,
-                name:'Toffi'
-            }}/>
-            <RecipeItem recipe={{
-                id:3,
-                name:'Peace'
-            }}/>
-            <RecipeItem recipe={{
-                id:4,
-                name:'Houdini'
-            }}/>
-        </div>
-      </section>
-  )
+    return (
+        <section>
+            <Header/>
+            {/*<User/>*/}
+            <CreateRecipe/>
+            <div>
+                {isLoading
+                    ? <div>Loading...</div>
+                    : data ? data.map(recipe => <RecipeItem key={recipe.id} recipe={recipe}/>)
+                        : <div>Not found</div>}
+            </div>
+        </section>
+    )
 }
 
 export default App
