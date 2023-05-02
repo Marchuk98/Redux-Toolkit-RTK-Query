@@ -1,6 +1,6 @@
 import styles from './RecipeItem.module.css'
-import {useActions} from "../../hooks/useActions.js";
-import {useFavorites} from "../../hooks/useFavorites.js";
+import {useActions} from "../../hooks/useActions.ts";
+import {useFavorites} from "../../hooks/useFavorites.ts";
 
 
 export const RecipeItem = ({recipe}) => {

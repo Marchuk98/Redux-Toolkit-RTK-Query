@@ -1,7 +1,7 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {reducer as favoritesReducer} from "./favorites/favorites.slice.js";
-import {userSlice} from "./user/user.slice.js";
-import {api} from "./api/api.js";
+import {reducer as favoritesReducer} from "src/store/favorites/favorites.slice";
+import {userSlice} from "src/store/user/user.slice";
+import {api} from "src/store/api/api";
 import {createLogger} from "redux-logger";
 
 

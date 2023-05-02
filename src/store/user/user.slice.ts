@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import {getUserById} from "./user.action.js";
+import {getUserById} from "./user.action.ts";
 
 export const userSlice = createSlice({
     name: 'user',

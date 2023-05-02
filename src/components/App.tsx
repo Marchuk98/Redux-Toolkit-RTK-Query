@@ -1,6 +1,6 @@
-import {RecipeItem} from "./recipe-items/RecipeItem.jsx";
-import {Header} from "./header/Header.jsx";
-import {useGetRecipesQuery} from '../store/api/api.js';
+import {RecipeItem} from "src/components/recipe-items/RecipeItem";
+import {Header} from "src/components/header/Header";
+import {useGetRecipesQuery} from '../store/api/api.ts';
 import {CreateRecipe} from "./create-recipe/CreateRecipe";
 
 // const userId = null

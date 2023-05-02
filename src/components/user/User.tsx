@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { useActions } from "../../hooks/useActions.js";
+import { useActions } from "../../hooks/useActions.ts";
 
 
 export const User = () => {

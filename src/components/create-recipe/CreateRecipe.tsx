@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {useCreateRecipeMutation} from "../../store/api/recipe.api.js";
+import {useCreateRecipeMutation} from "../../store/api/recipe.api.ts";
 
 
 const defaultValue = {
