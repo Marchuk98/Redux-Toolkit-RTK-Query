@@ -1,7 +1,7 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit";
-import {reducer as favoritesReducer} from "src/store/favorites/favorites.slice";
-import {userSlice} from "src/store/user/user.slice";
-import {api} from "src/store/api/api";
+import {reducer as favoritesReducer} from "../store/favorites/favorites.slice";
+import {userSlice} from "../store/user/user.slice";
+import {api} from "../store/api/api";
 import {createLogger} from "redux-logger";
 
 
@@ -20,3 +20,5 @@ export const store = configureStore({
     middleware: (getDefaultMiddleware) =>
         getDefaultMiddleware().concat(api.middleware).concat(logger)
 });
+
+export type RootState = ReturnType<typeof store.getState>

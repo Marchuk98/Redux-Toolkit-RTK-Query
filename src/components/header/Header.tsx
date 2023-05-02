@@ -1,6 +1,6 @@
 import {BsFillBagHeartFill} from "react-icons/bs";
 import styles from './Header.module.css'
-import {useFavorites} from "../../hooks/useFavorites.ts";
+import {useFavorites} from "../../hooks/useFavorites";
 
 export const Header = () => {
     const {favorites} = useFavorites()

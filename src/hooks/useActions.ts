@@ -1,9 +1,9 @@
 import {useDispatch} from "react-redux";
 import {useMemo} from "react";
 import {bindActionCreators} from "@reduxjs/toolkit";
-import {actions} from "../store/favorites/favorites.slice.ts";
-import * as userActions from '../store/user/user.action.ts'
-import {getUserById} from "../store/user/user.action.ts";
+import * as userActions from '../store/user/user.action'
+import {getUserById} from "../store/user/user.action";
+import {actions} from "../store/favorites/favorites.slice";
 
 const rootAction = {
     ...actions,
