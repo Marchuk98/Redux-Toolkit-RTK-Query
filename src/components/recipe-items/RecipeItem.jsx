@@ -14,10 +14,9 @@ export const RecipeItem = ({recipe}) => {
         toggleFavorites(recipe)
     }
 
-    console.log(favorites)
-
     return(
         <div className={styles.item}>
+            <img src={recipe.image} alt={recipe.name} width={100} />
             <h3>{recipe.name}</h3>
             <button onClick={addFavoritesHandler}>{isExists ? 'Remove from' : "Add to"} favorites</button>
         </div>
